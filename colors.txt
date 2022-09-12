@@ -1,0 +1,5 @@
+$silver-sand: #AEB5BBff;
+$dark-sienna: #3D2119ff;
+$maximum-blue: #4DA7BFff;
+$light-salmon: #F3AC8Cff;
+$smoky-black: #100C0Bff;
