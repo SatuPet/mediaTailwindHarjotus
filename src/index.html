@@ -4,33 +4,143 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+    <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet">
   </head>
-  <body class="h-14 bg-gradient-to-r from-cyan-500 to-blue-500">
+  <body class="bg-[url('light6.jpeg')] backdrop-blur-sm bg-white/30  2xl:max-w-1/2 max-w-1/3 m-auto">
+    <!-- <div class="bg-[url('lights.jpeg')]"></div> -->
 
-    <header class="flex justify-around m-10	">
-      <button class="btn-blue w-28 hover:bg-sky-700">Koti</button>
-      <button class="btn-blue w-28 hover:bg-sky-700">Tapahtumat</button>
-      <button class="btn-blue w-28 hover:bg-sky-700">Haku</button>
+    <!-- <div class="max-w-screen-lg"> -->
+    <header class="flex justify-around m-16">
+      <a href="/src/index.html">
+      <button class="btn-test w-32">Koti</button>
+    </a>
+    <a href="/src/tapahtumat.html">
+      <button class="btn-test w-32">Tapahtumat</button>
+    </a>
+    <a href="./chat/chat.html">
+      <button class="btn-test w-32">Haku</button>
+  </a>
     </header>
 
-    <main>
-      <div class="grid grid-cols-8 gap-2 mx-16 m-32">
-        <div class="col-span-4 box-border h-72 w-100 p-4 border-4"></div>
-        <div></div>
-        <div class="col-span-3 box-border h-72 w-65 p-4 border-4"></div>
+    <!-- <header class="grid grid-cols-8 mx-16 m-16">
+      <div class="col-span-2">
+        <button class="btn-blue w-28 hover:bg-sky-700">Koti</button>
       </div>
-    </main>
-
+      <div></div>
+      <button class="col-span-2 btn-blue w-28 hover:bg-sky-700">
+        Tapahtumat
+      </button>
+      <div></div>
+      <button class="btn-black w-28 hover:bg-black">Haku</button>
+    </header> -->
     <section>
-      <div class="grid grid-cols-3 gap-4 mx-16">
-        <div class="box-border h-40 w-40 p-4 border-4"></div>
-        <div class="box-border h-40 w-40 p-4 border-4"></div>
-        <div class="box-border h-40 w-40 p-4 border-4"></div>
-        <div class="box-border h-40 w-40 p-4 border-4"></div>
-        <div class="box-border h-40 w-40 p-4 border-4"></div>
-        <div class="box-border h-40 w-40 p-4 border-4"></div>
-        <div class="box-border h-40 w-40 p-4 border-4"></div>
+      <div class="grid lg:grid-cols-9 gap-2 mx-16 m-32">
+        <div class="col-span-5 box-border h-30 w-100">
+          <!-- <iframe class="w-full aspect-video border-4"autoplay="" src="./img/Videosprintti_2.mp4"></iframe> -->
+          <video
+          id="my-player"
+          class="video-js vjs-theme-forest"
+          controls
+          preload="auto"
+          width="640"
+          height="264"
+          poster=""
+          data-setup="{}"
+        >
+          <source src="./img/Videosprintti_2.mp4" type="video/mp4" />
+          <source src="MY_VIDEO.webm" type="video/webm" />
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank"
+              >supports HTML5 video</a
+            >
+          </p>
+        </video>
+        </div>
+        <div></div>
+        <div class="col-span-3 box-border h-30 p-4 w-65  bg-test">
+          <p class="text-center">Info</p>
+        <p>jotain tekstiä asiaan liittyvää toivottavasti ja hyvin paljon jotain
+          jotain ja vielä kerran jtn.....
+        </p>
+      </div>
       </div>
     </section>
+
+    <section>
+      <div class="grid xl:grid-cols-3 md:grid-cols-2 auto-cols-auto gap-10 mx-16">
+
+        <div class="">
+          <div class="text-center"><p>Maanatai</p></div>
+          <div class="box-border h-28 ">
+            <img class="object-cover h-full w-full" src="./img/kuva.png" alt="jokuKuva">
+          </div>
+          <div class="box-border h-12 border-x-2 border-b-2 border-t-2 border-yellow bg-test mb-2">
+            <p class="p-1">Striimi 1</p></div>
+        </div>
+        <!-- <div></div> -->
+        <div class="">
+          <div class="text-center"><p>Tiistai</p></div>
+          <div class="box-border h-28 ">
+            <img class="object-cover h-full w-full" src="./img/kuva.png" alt="jokuKuva">
+          </div>
+          <div class="box-border h-12 border-x-2 border-b-2 border-t-2 border-yellow bg-test mb-2">
+            <p class="p-1">Striimi 1</p></div>
+        </div>
+        <!-- <div></div> -->
+        <div class="">
+          <div class="text-center"><p>Keskiviikko</p></div>
+          <div class="box-border h-28 ">
+            <img class="object-cover h-full w-full" src="./img/kuva.png" alt="jokuKuva">
+          </div>
+          <div class="box-border h-12 border-x-2 border-b-2 border-t-2 border-yellow bg-test mb-2">
+            <p class="p-1">Striimi 1</p></div>
+        </div>
+        <div class="">
+          <div class="text-center"><p>Torstai</p></div>
+          <div class="box-border h-28 ">
+            <img class="object-cover h-full w-full" src="./img/kuva.png" alt="jokuKuva">
+          </div>
+          <div class="box-border h-12 border-x-2 border-b-2 border-t-2 border-yellow bg-test mb-2">
+            <p class="p-1">Striimi 1</p></div>
+        </div>
+        <!-- <div></div> -->
+        <div class="">
+          <div class="text-center"><p>Perjanai</p></div>
+          <div class="box-border h-28 ">
+            <img class="object-cover h-full w-full" src="./img/kuva.png" alt="jokuKuva">
+          </div>
+          <div class="box-border h-12 border-x-2 border-b-2 border-t-2 border-yellow bg-test mb-2">
+            <p class="p-1">Striimi 1</p></div>
+        </div>
+        <!-- <div></div> -->
+        <div class="">
+          <div class="text-center"><p>Lauantai</p></div>
+          <div class="box-border h-28 ">
+            <img class="object-cover h-full w-full" src="./img/kuva.png" alt="jokuKuva">
+          </div>
+          <div class="box-border h-12 border-x-2 border-b-2 border-t-2 border-yellow bg-test mb-2">
+            <p class="p-1">Striimi 1</p></div>
+        </div>
+        <div class="">
+          <div class="text-center"><p>Sunnuntai</p></div>
+          <div class="box-border h-28 ">
+            <img class="object-cover h-full w-full" src="./img/kuva.png" alt="jokuKuva">
+          </div>
+          <div class="box-border h-12 border-x-2 border-b-2 border-t-2 border-yellow bg-test mb-2">
+            <p class="p-1">Striimi 1</p></div>
+        </div>
+    </section>
+
+    <footer>
+      <div class="grid grid-cols-8 gap-2 mx-16 m-32">
+        <div class="col-start-2 col-span-5 box-border h-24 text-center	p-2 bg-test">
+          <p>ottakaa yhteyttä testi</p>
+        </div>
+      </div>
+    </footer>
+  <!-- </div> -->
   </body>
 </html>
